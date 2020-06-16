@@ -2,78 +2,67 @@ extends layout
 
 block content
 
-div(class="container")
-    nav(class="navbar navbar-expand-lg navbar-dark bg-primary")
-        a(class="navbar-brand", href="#") CompanyName
-        button(class="navbar-toggler", type="button", data-toggle="collapse", data-target="#navbarSupportedContent")
-            span(class="navbar-toggler-icon")
-        
-        div(class="collapse navbar-collapse", id="navbarSupportedContent")
-            ul(class="navbar-nav ml-auto")
-                li(class="nav-item")
-                    a(class="nav-link", href="#") Home
+    div(class="container")
+        nav(class="navbar navbar-expand-lg navbar-dark bg-primary")
+            a(class="navbar-brand", href="#") CompanyName
+            button(class="navbar-toggler", type="button", data-toggle="collapse", data-target="#navbarSupportedContent")
+                span(class="navbar-toggler-icon")
+            
+            div(class="navbar-collapse collapse", id="navbarSupportedContent")
+                ul(class="navbar-nav ml-auto")
+                    li(class="nav-item")
+                        a(class="nav-link", href="#") Home
 
-                li(class="nav-item")
-                    a(class="nav-link", href="#") About
+                    li(class="nav-item")
+                        a(class="nav-link", href="#") About
 
-                li(class="nav-item dropdown")
-                    a(class="nav-link dropdown-toggle", href="#", id="navbarDropdown", data-toggle="dropdown") Products
+                    li(class="nav-item dropdown")
+                        a(class="nav-link dropdown-toggle", href="#", id="navbarDropdown", data-toggle="dropdown") Products
 
-                    div(class="dropdown-menu")
-                        a(class="dropdown-item", href="#") Product 1
-                        a(class="dropdown-item", href="#") Product 2
-                        div(class="dropdown-divider")
-                        a(class="dropdown-item", href="#") Another product
-                
-                li(class="nav-item")
-                    a(class="nav-link", href="#") Contact
-                
+                        div(class="dropdown-menu")
+                            a(class="dropdown-item", href="#") Product 1
+                            a(class="dropdown-item", href="#") Product 2
+                            div(class="dropdown-divider")
+                            a(class="dropdown-item", href="#") Another product
+                    
+                    li(class="nav-item")
+                        a(class="nav-link", href="#") Contact
+                    
 
-    <div class="jumbotron">
-        <h1 class="display-4">Simple. Elegant. Awesome.</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </p>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-4">
-            <div class="card mb-4">
-                <div class="card-body text-center">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title</p>
-                <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body text-center">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title</p>
-                <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body text-center">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title</p>
-                <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row mt-sm-4 mt-md-0">
-        <div class="col-sm-12 col-md-8">
-            <h3>An important heading</h3>
-            <p class="lead">A sort of important subheading can go here, which is larger and gray.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-        <div class="col-sm-12 col-md-4">
-            ..vertical navigation shortly..
-        </div>
-    </div>
-    </div>
+        div(class="jumbotron")
+            h1(class="display-4") Simple. Elegant. Awesome.
+            p(class="lead") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            p(class="lead")
+                a(class="btn btn-primary btn-lg", href="#", role="button") Learn more
+
+        div(class="row")
+            div(class="col-sm-12 col-md-4")
+                div(class="card mb-4")
+                    div(class="card-body text-center")
+                        h5(class="card-title") Card title
+                        p(class="card-text") Some quick example text to build on the card title
+                        a(href="#", class="card-link") Another link
+
+            div(class="col")
+                div(class="card")
+                    div(class="card-body text-center")
+                        h5(class="card-title") Card title
+                        p(class="card-text") Some quick example text to build on the card title
+                        a(href="#" class="card-link") Another link
+
+            div(class="col")
+                div(class="card")
+                    div(class="card-body text-center")
+                        h5(class="card-title") Card title
+                        p(class="card-text") Some quick example text to build on the card title
+                        a(href="#", class="card-link") Another link
+
+        div(class="row mt-sm-4 mt-md-0")
+            div(class="col-sm-12 col-md-8")
+                h3 An important heading
+                p(class="lead") A sort of important subheading can go here, which is larger and gray.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+            div(class="col-sm-12 col-md-4")
+                vertical navigation shortly
