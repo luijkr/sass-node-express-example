@@ -1,0 +1,8 @@
+// custom styles
+// these should go before the other imports in order to override them
+@import "styles.scss";
+
+// standard imports
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "libs/font-awesome/font-awesome";

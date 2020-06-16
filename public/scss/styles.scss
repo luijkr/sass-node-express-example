@@ -1,0 +1,10 @@
+// Variable Overrides 
+$theme-colors: (
+  "primary": #d95700
+);
+
+$bg-color: red; 
+
+body {
+    background: $bg-color;
+}
