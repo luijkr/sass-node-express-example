@@ -11,7 +11,7 @@ with open("data/words.txt", "w") as file:
 
 # with open("data/dictionary-test.json", "w") as file:
 with open("data/dictionary.json", "w") as file:
-  for word in words: # [20000:20005]:
+  for word in words:
     slug = slugify(word)
     definitions = data[word]
     if len(definitions) > 0:
