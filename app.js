@@ -1,13 +1,24 @@
 const express = require('express');
+var createError = require('http-errors');
 const path = require('path');
-const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-const index = require('./routes/index');
-
+// instantiate app
 const app = express();
+
+// import routes
+const indexRouter = require('./routes/index');
+const browseRouter = require('./routes/browse');
+const aboutRouter = require('./routes/about');
+const wordRouter = require('./routes/word');
+
+// set routes
+app.use('/', indexRouter);
+app.use('/browse', browseRouter);
+app.use('/about', aboutRouter);
+app.use('/word', wordRouter);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,8 +32,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-
+// set up mongoose connection
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb://localhost:27017/dictionary';
+mongoose.connect(mongoDB, { useNewUrlParser: true });
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 if (app.get('env') === 'staging' || app.get('env') === 'production') {
 	// If staging or production, compile the SASS files
@@ -37,12 +52,9 @@ else {
 	app.use('/css', css);
 }
 
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  const err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+  next(createError(404));
 });
 
 // error handler

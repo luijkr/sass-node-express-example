@@ -8,6 +8,7 @@
     "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
   },
   "dependencies": {
+    "asynch": "^0.5.2",
     "body-parser": "~1.18.2",
     "bootstrap": "^4.0.0-beta.2",
     "cookie-parser": "~1.4.3",
@@ -16,6 +17,7 @@
     "jade": "~1.11.0",
     "jquery": "^1.9.1",
     "mkdirp": "^0.5.1",
+    "mongoose": "^5.9.19",
     "morgan": "~1.9.0",
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
