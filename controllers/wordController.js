@@ -17,7 +17,6 @@ exports.word_detail = function(req, res, next) {
         return next(err);
     }
     // Successful, so render.
-    console.log(results);
     res.render('word_detail', { word: results.word } );
   });
 

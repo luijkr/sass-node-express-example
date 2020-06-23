@@ -2,7 +2,6 @@ extends layout
 
 block content
 
-    
     div(class="jumbotron")
         div(class="col-md-8 offset-md-2 offset-sm-1")
             h1(class="display-4 text-center font-italic pb-5") #{word.word}
@@ -11,3 +10,7 @@ block content
                 each def in word.definitions
                     li
                         p(class="lead") #{def}
+        
+        div(class="row")
+            div(class="col-md-9 offset-md-2 offset-sm-1 justify-content-end")
+                button(class="btn btn-primary float-right", onclick="history.back()") Go Back

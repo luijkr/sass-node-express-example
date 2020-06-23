@@ -4,10 +4,13 @@ block content
 
     div(class="jumbotron")
         h1(class="display-4 text-center") An Ordinary Dictionary. Made simple.
-        p(class="lead")
-            div(class="row")
-                div(class="col-sm-12 col-md-9 input-group p-3 mx-auto")
-                    input(type="text", class="form-control form-control-lg", placeholder="Enter a word")
+
+        //- search bar
+        div(class="row")
+            div(class="form-group col-sm-12 col-md-9 input-group p-3 mx-auto")
+                div(class="input-group")
+                    input(id="search-query", type="text", class="form-control form-control-lg", placeholder="Enter a word")
                     div(class="input-group-append")
-                        a(class="btn btn-primary btn-lg", href="#", role="button") Search
+                        button(class="btn btn-primary btn-lg", id="search-query", type="submit", onclick='javascript: window.open("/search?search="+document.getElementById("search-query").value, "_self");') Search
+
         p(class="lead text-center") Try the search bar to search through all #[strong !{data.word_count} words] in this dictionary!

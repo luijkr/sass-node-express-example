@@ -2,9 +2,10 @@ var express = require('express');
 var router = express.Router();
 
 // require controller module
-var browse_controller = require('../controllers/browseController');
+var search_controller = require('../controllers/searchController');
 
 // GET home page
-router.get('/', browse_controller.browse_main);
+
+router.get('/', search_controller.search_execute);
 
 module.exports = router;

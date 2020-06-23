@@ -9,8 +9,8 @@ var Word = require('../models/word');
 // display list of words on Browse page
 exports.browse_main = function(req, res, next) {
 
-  const resPerPage = 10; // results per page
-  const page = Number(req.params.page) || Number(1); // set default page to 1 if not provided
+  const resPerPage = 5; // results per page
+  const page = Number(req.query.page) || Number(1); // set default page to 1 if not provided
 
   async.parallel({
 

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+    div(class="jumbotron")
+      div(class="col-sm-12 col-md-9 input-group p-3 mx-auto")
+        if word
+          p(class="lead text-center") Word found: 
+            a(href=word.url) #{word.word}
+        else
+          p(class="lead text-center") No results found, try a 
+            a(href="/") new search
+
+      div(class="row")
+          div(class="col-md-9 offset-md-2 offset-sm-1 justify-content-end")
+              button(class="btn btn-primary float-right", onclick="history.back()") Go Back
